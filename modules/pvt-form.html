@@ -26,16 +26,17 @@
                             <hr>
                             <div class="row px-4">
                                 <div class='col'>
-                                   <span>Select a File</span>
-                                   <div class="form-control">
-                                       <u style='cursor:pointer' id=link_File_Name__ID></u>
-                                       <br>
-                                       <input type="file" name=File_Name style="margin-top:6px" /> &nbsp&nbsp&nbsp <button type="button" id=x_File_Name__ID>Remove</button>
-                                   </div>
+                                    <span>File Upload</span>
+                                    <div class="form-control">
+                                        <u style='cursor:pointer' id=link_File_Name__ID></u>
+                                        <input type="file" name=File_Name style="margin-top:6px" class='btn btn-primary btn-lg' /><br />
+                                        <br />
+                                        <button id=x_File_Name__ID type="button" class='btn btn-primary btn-lg' onClick="this.form.reset()">Remove</button>
+                                        <button id='submit__ID' type='submit' class='btn btn-primary btn-lg'>Submit</button>
+                                    </div>
                                 </div>
                             </div>
                             <hr>
-                            <button type="submit" id="submit__ID" class="btn btn-primary btn-lg">Submit</button>
                             <div class='row px-4'>
                                 <div class="col-sm-12 col-lg-6">
                                     <label class=''><span class=''>Subject ID</span>
@@ -317,6 +318,7 @@
             </div>
         </div>
     </div>
+    VmInclude:__COMPONENT__/m/model.01.html
     <script>
         //---------------------------------------------
         function F__ID() {
@@ -324,11 +326,9 @@
 			VmInclude:'__COMPONENT__/f/form.01.js'
             VmInclude:__CURRENT_PATH__/shared-form.js
             //-------------------------------------
-            var load2=m.load;
+            m.old_load=m.load;
             m.load=function(){
-                load2();
-                if(m.input.readonly!=undefined) $('#submit__ID').hide();
-                //render_file_field_v2(m.input.record,'__ID',$('#File_Name__ID'));
+                m.old_load();
                 m.set_file_link("File_Name");
             }
             //-------------------------------------
