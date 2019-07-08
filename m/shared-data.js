@@ -9,7 +9,7 @@ m.set_req=function(){
 };
 //-------------------------------------
 m.load=function(){
-    if(m.input!=undefined && m.input.record!=undefined){
+        if(m.input!=undefined && m.input.record!=undefined){
         $('#export_section__ID').hide();
     }
     else{
@@ -17,6 +17,65 @@ m.load=function(){
     }
 }
 //-------------------------------------
+m.cell_render=function(records,I,field,td){
+    switch(field){
+        case '_Status':
+            td.html("<span style='color:"+records[I].Data['sysStatus']+"'>&#x25cf;</span>");
+            break;
+        case '_Participant_ID':
+            td.html(records[I].Data.Participant_uid);
+            break;
+        case '_Notes':
+            //default: create a hyperlink to load note module with task name and task UID
+            //if there is a note for this record, the td will be overwritten lately
+            td.html("<u style='cursor:pointer'>Notes</u>");
+            td.find('u').on('click',function(){
+                $vm.load_module(notes,'',{task_name:m.task_name,task_uid:records[I].UID})
+            })
+            break;
+    }
+}
+//-------------------------------------
+m.data_process=function(){
+    //get all notes for current grid view and render them
+    var notes="notes-data";
+    var note_table=$vm.module_list[notes].Table;
+    alert($vm.module_list[notes].Table)
+    var uid_array=[];
+    for(var i=0;i<m.records.length;i++){
+        uid_array.push(m.records[i].UID)
+    }
+    var query={ I2:m.task_name, I3: { $in: uid_array } }
+    var req={cmd:"find",table:note_table,query:query}
+    $vm.request(req,function(res){
+        //--------------------------
+        //find the notes and attach to the record
+        if(res.result.length!=undefined){
+            for(var j=0;j<m.records.length;j++){
+                for(var k=0;k<res.result.length;k++){
+                    if(m.records[j].UID==res.result[k].I3){
+                        m.records[j].sys_x=res.result[k].Data;
+                        break;
+                    }
+                }
+            }
+        }
+        //--------------------------
+        //rendering the notes;
+        $("#grid__ID td[data-id=_Notes]").each(function(index){
+            if(m.records[index].sys_x!=undefined){
+                var t=m.records[index].sys_x.Title;
+                var c=m.records[index].sys_x.Color
+                $(this).html("<u style='cursor:pointer;color:"+c+"'>"+t+"</u>");
+                $(this).find('u').on('click',function(){
+                    $vm.load_module(notes,'',{task_name:m.task_name,task_uid:m.records[index].UID})
+                })
+            }
+        });
+        //--------------------------
+    });
+}
+/*
 m.cell_render=function(records,I,field,td){
     switch(field){
         case '_Status':
@@ -41,7 +100,7 @@ m.cell_render=function(records,I,field,td){
             });
             break;
     }
-}
+}*/
 //-------------------------------------
 m.new=function(){
     if(m.form_module!=undefined){
