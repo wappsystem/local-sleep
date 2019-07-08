@@ -1,3 +1,5 @@
+var notes="notes-data";
+var note_table=$vm.module_list[notes].Table;
 //-------------------------------------
 m.set_req=function(){
     if(m.input!=undefined && m.input.record!=undefined){
@@ -38,9 +40,7 @@ m.cell_render=function(records,I,field,td){
 //-------------------------------------
 m.data_process=function(){
     //get all notes for current grid view and render them
-    var notes="notes-data";
-    var note_table=$vm.module_list[notes].Table;
-    alert($vm.module_list[notes].Table)
+    //var notes="notes-data";
     var uid_array=[];
     for(var i=0;i<m.records.length;i++){
         uid_array.push(m.records[i].UID)
