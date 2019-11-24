@@ -21,8 +21,6 @@
 
         "local-sleep-randomisation-table-data":		    {url:"$H/m/randomisation-table-data.html",Table:"local-sleep-randomisation-table",form_module:"local-sleep-randomisation-table-form"},
         "local-sleep-randomisation-table-form":		    {url:"$H/m/randomisation-table-form.html",Table:"local-sleep-randomisation-table"},
-        "local-sleep-concom-medication-data":            {url:"$H/m/concom-medication-data.html",Table:"local-sleep-concom-medication",form_module:"local-sleep-concom-medication-form",task_name:"Screening - Concomittant Medication"},
-        "local-sleep-concom-medication-form":            {url:"$H/m/concom-medication-form.html",Table:"local-sleep-concom-medication"},
         "local-sleep-g-adverse-event-data":                {url:"$H/m/adverse-event-data.html",Table:"local-sleep-g-adverse-event",form_module:"local-sleep-g-adverse-event-form",task_name:"General - Adverse Event"},
         "local-sleep-g-adverse-event-form":                {url:"$H/m/adverse-event-form.html",Table:"local-sleep-g-adverse-event"},
         "local-sleep-g-protocol-amendments-data":                {url:"$H/m/protocol-amendments-data.html",Table:"local-sleep-g-protocol-amendments",form_module:"local-sleep-g-protocol-amendments-form"},
