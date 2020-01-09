@@ -354,17 +354,6 @@
         "local-sleep-t2-d5-t5b-kss-data":		                {url:"$H/m/kss-data.html",Table:"local-sleep-t2-d5-t5b-kss",form_module:"local-sleep-t2-d5-t5b-kss-form",task_name:"Treatment 2 Day 5 TB5 - KSS After PVT"},
         "local-sleep-t2-d5-t5b-kss-form":		                {url:"$H/m/kss-form.html",Table:"local-sleep-t2-d5-t5b-kss",task_name:"KSS After PVT"},
 
-        "local-sleep-t2-d1-weight-bp-pm-data":		                {url:"$H/m/weight-bp-pm-data.html",Table:"local-sleep-t2-d1-weight-bp-pm",form_module:"local-sleep-t2-d1-weight-bp-pm-form",task_name:"Treatment 2 Day 1 - Weight - Blood Pressure PM "},
-        "local-sleep-t2-d1-weight-bp-pm-form":		                {url:"$H/m/weight-bp-pm-form.html",Table:"local-sleep-t2-d1-weight-bp-pm"},
-        "local-sleep-t2-d1-ess-data":		                {url:"$H/m/ess-data.html",Table:"local-sleep-t2-d1-ess",form_module:"local-sleep-t2-d1-ess-form",task_name:"Treatment 2 Day 1 - ESS"},
-        "local-sleep-t2-d1-ess-form":		                {url:"$H/m/ess-form.html",Table:"local-sleep-t2-d1-ess",task_name:"ESS"},
-        "local-sleep-t2-d1-dass-data":		                {url:"$H/m/dass-data.html",Table:"local-sleep-t2-d1-dass",form_module:"local-sleep-t2-d1-dass-form",task_name:"Treatment 2 Day 1 - DASS"},
-        "local-sleep-t2-d1-dass-form":		                {url:"$H/m/dass-form.html",Table:"local-sleep-t2-d1-dass",task_name:"DASS"},
-        "local-sleep-t2-d1-cpap-upload-data":		                {url:"$H/m/upload-file-data.html",Table:"local-sleep-t2-d1-cpap-upload",form_module:"local-sleep-t2-d1-cpap-upload-form",task_name:"Treatment 2 Day 1 - CPAP upload"},
-        "local-sleep-t2-d1-cpap-upload-form":		                {url:"$H/m/upload-file-form.html",Table:"local-sleep-t2-d1-cpap-upload"},
-        "local-sleep-t2-d1-cpap-data":		                {url:"$H/m/cpap-data.html",Table:"local-sleep-t2-d1-cpap",form_module:"local-sleep-t2-d1-cpap-form",task_name:"Treatment 2 Day 1 - CPAP"},
-        "local-sleep-t2-d1-cpap-form":		                {url:"$H/m/cpap-form.html",Table:"local-sleep-t2-d1-cpap"},
-
         "local-sleep-t2-d5-bp-am-data":		                {url:"$H/m/bp-am-data.html",Table:"local-sleep-t2-d5-bp-am",form_module:"local-sleep-t2-d5-bp-am-form",task_name:"Treatment 2 Day 5 - Blood Pressure AM"},
         "local-sleep-t2-d5-bp-am-form":		                {url:"$H/m/bp-am-form.html",Table:"local-sleep-t2-d5-bp-am"},
 
