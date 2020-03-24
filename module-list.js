@@ -7,7 +7,8 @@
                                             child_panel:"panel-child-local-sleep",
                                             questionnaire_setup:"online-questionnaire-setup-local-sleep",
                                             online_questionnaire:"online-questionnaire-app-local-sleep",
-                                            participant_id:{field1:"Subject_ID",field2:"Subject_Initials"}
+                                            participant_id:{field1:"Subject_ID",field2:"Subject_Initials"},
+                                            participant_export:"ID,Randomisation_Number,Subject_ID,Screening_Number,Subject_Initials,Gender,DOB"
                                         },
         "participant-form":   		{url:"$H/m/participant/participant-form.html",Table:"local-sleep-participant"},
 
