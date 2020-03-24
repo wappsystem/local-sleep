@@ -188,6 +188,9 @@ m.export_records=function(){
         export_fields=export_fields.slice(5,export_fields.length-3);
         //Participants export fields Specified in module-list
         var participant_export=$vm.module_list['participant-data'].participant_export;
+        if(participant_export==undefined){
+            participant_export="ID,Randomisation_Number,Subject_ID,Screening_Number,Subject_Initials,Gender,DOB"
+        }
         var participant_fields=participant_export.split(',');
         //Create empty object with all export fields. Participant and Task
         var empty_item={}
@@ -226,6 +229,9 @@ m.export_records=function(){
                             empty_item2[participant_fields[ll]]=participant_rec[ii][participant_fields[ll]];
                         }
                     }
+                    for( var ll=0;ll<export_fields.length;ll++){
+                        empty_item2[export_fields[ll]]="";
+                    }
                     output_data.push(empty_item2)
                 }
             }
@@ -238,4 +244,5 @@ m.export_records=function(){
     }
     close_model__ID();
 }
+
 //-------------------------------
