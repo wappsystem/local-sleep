@@ -37,6 +37,8 @@
 
         "local-sleep-s-date-data":		                    {url:" $H/m/library/date-data.html",Table:"local-sleep-s-date",form_module:"local-sleep-s-date-form",task_name:"Screening - Visit Date"},
         "local-sleep-s-date-form":		                    {url:" $H/m/library/date-form.html",Table:"local-sleep-s-date"},
+        "local-sleep-s-consent-data":		                    {url:" $H/m/library/consent-data.html",Table:"local-sleep-s-consent",form_module:"local-sleep-s-consent-form",task_name:"Screening - Digital consent form"},
+        "local-sleep-s-consent-form":		                    {url:" $H/m/library/consent-form.html",Table:"local-sleep-s-consent",task_name:"Digital consent form"},
         "local-sleep-b-d1-date-data":		                {url:" $H/m/library/date-data.html",Table:"local-sleep-b-d1-date",form_module:"local-sleep-b-d1-date-form",task_name:"Baseline Day 1 - Visit Date"},
         "local-sleep-b-d1-date-form":		                {url:" $H/m/library/date-form.html",Table:"local-sleep-b-d1-date"},
         "local-sleep-b-d2-date-data":		            {url:" $H/m/library/date-data.html",Table:"local-sleep-b-d2-date",form_module:"local-sleep-b-d2-date-form",task_name:"Baseline Day 2 - Visit Date"},
