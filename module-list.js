@@ -32,6 +32,8 @@
         "local-sleep-randomisation-table-form":		    {url:" $H/m/library/randomisation-table-form.html",Table:"local-sleep-randomisation-table"},
         "local-sleep-g-adverse-event-data":                {url:" $H/m/library/adverse-event-data.html",Table:"local-sleep-g-adverse-event",form_module:"local-sleep-g-adverse-event-form",task_name:"General - Adverse Event"},
         "local-sleep-g-adverse-event-form":                {url:" $H/m/library/adverse-event-form.html",Table:"local-sleep-g-adverse-event"},
+        "local-sleep-g-file-notes-data":                {url:" $H/m/library/file-notes-data.html",Table:"local-sleep-g-file-notes",form_module:"local-sleep-g-file-notes-form",task_name:"General - File Notes"},
+        "local-sleep-g-file-notes-form":                {url:" $H/m/library/file-notes-form.html",Table:"local-sleep-g-file-notes",task_name:"General - File Notes"},
         "local-sleep-g-protocol-amendments-data":                {url:" $H/m/library/protocol-amendments-data.html",Table:"local-sleep-g-protocol-amendments",form_module:"local-sleep-g-protocol-amendments-form"},
         "local-sleep-g-protocol-amendments-form":                {url:" $H/m/library/protocol-amendments-form.html",Table:"local-sleep-g-protocol-amendments"},
 
